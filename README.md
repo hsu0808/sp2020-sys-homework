@@ -36,7 +36,7 @@ calc > i
 LexToken(NAME,'i',1,0)
 55
 ``` 
-for-loop運算: 輸入 for 變數 loop 起始值 終值 avg ->執行連續加法平均運算
+for-loop運算: 輸入 for 變數 loop 起始值 終值 avg ->執行連續加法後取平均值 
 ```diff
 calc > for i loop 1 10 avg
 LexToken(FOR,'for',1,0)
@@ -50,7 +50,7 @@ calc > i
 LexToken(NAME,'i',1,0)
 5.5
 ```
-if-else運算: if 變數 符號(>,>=,==,<=,<) 變數=數值 else 變數=數值 : 
+if-else運算: if 變數 符號(>,>=,==,<=,<) 變數=數值 else 變數=數值 
 ```diff
 calc > i=10
 LexToken(NAME,'i',1,0)
