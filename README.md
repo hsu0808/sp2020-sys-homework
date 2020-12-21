@@ -13,14 +13,16 @@ LexToken(NUMBER,2,1,0)
 LexToken(POWER,'^',1,1)
 LexToken(NUMBER,2,1,2)
 4
+[['op','arg1','arg2','result'],['^','2','2','t1']['=','t1',' ','a']]
 ```
-根號運算：輸入num ** num 例：4 ** 2
+根號運算：輸入num ! num 例：4 ! 2
 ```diff
-calc > 4**2
+calc > 4!2
 LexToken(NUMBER,4,1,0)
-LexToken(ROOT,'**',1,1)
+LexToken(ROOT,'!',1,1)
 LexToken(NUMBER,2,1,3)
 2.0
+[['op','arg1','arg2','result'],['!','4','2','t1']['=','t1',' ','a']]
 ```
 for-loop運算: 輸入 for 變數 loop 起始值 終值 add ->執行連續加法運算
 ```diff
@@ -35,6 +37,7 @@ LexToken(ADD,'add',1,16)
 calc > i
 LexToken(NAME,'i',1,0)
 55
+[['op','arg1','arg2','result'],['=','i',' ','a']]        
 ``` 
 for-loop運算: 輸入 for 變數 loop 起始值 終值 avg ->執行連續加法後取平均值 
 ```diff
@@ -49,6 +52,7 @@ LexToken(AVG,'avg',1,16)
 calc > i
 LexToken(NAME,'i',1,0)
 5.5
+[['op','arg1','arg2','result'],['=','i',' ','a']] 
 ```
 if-else運算: if 變數 符號(>,>=,==,<=,<) 變數=數值 else 變數=數值 
 ```diff
@@ -74,6 +78,7 @@ LexToken(COLON,':',1,21)
 calc > k
 LexToken(NAME,'k',1,0)
 5
+[['op','arg1','arg2','result'],['=','k',' ','a']] 
 ```
 
 繪製passing tree，例:1+2+3+4
@@ -87,6 +92,7 @@ LexToken(NUMBER,3,1,4)
 LexToken(PLUS,'+',1,5)
 LexToken(NUMBER,4,1,6)
 10
+[['op','arg1','arg2','result'],['+','1','2','t1'],['+','t1','3','t2'],['+','t2','4','t3'],['=','t3',' ','a']]
 ```
 在你儲存程式的資料夾內可找到nx_test.png所畫出的結果
 
