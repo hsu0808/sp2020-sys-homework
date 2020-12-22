@@ -54,7 +54,7 @@ LexToken(NAME,'i',1,0)
 5.5
 [['op','arg1','arg2','result'],['=','i',' ','a']] 
 ```
-if-else運算: if 變數 符號(>,>=,==,<=,<) 變數=數值 else 變數=數值 
+if-else運算: if 變數 符號(>,>=,==,<=,<) 變數=數值 else 變數=數值 :
 ```diff
 calc > i=10
 LexToken(NAME,'i',1,0)
